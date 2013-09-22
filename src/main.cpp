@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	LOG("Initialized MOSAIS!");
+	LOG("Initialized MOSAIS, hell yes!");
 	
 	return EXIT_SUCCESS;
 }
