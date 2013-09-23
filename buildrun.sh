@@ -3,8 +3,16 @@ echo "--------------------------------------------"
 echo $(tput bold)$(tput setaf 1)"----------------------"
 echo "-- GENERATING CMAKE --"
 echo "----------------------"$(tput sgr0)
-cmake -G"Unix Makefiles" pro/makefile/
-cd pro/makefile
+if [ "$1" == "32" ]
+then
+	cmake -G"Unix Makefiles" pro/make_32/
+	cd pro/make_32
+elif [ "$1" == "64" ]
+then
+	cmake -G"Unix Makefiles" pro/make_64/
+	cd pro/make_64
+fi
+
 make all
 cd ../../bin
 echo $(tput bold)$(tput setaf 1)"----------------------"
