@@ -8,5 +8,6 @@ mosais::nlp::Dictionary::Dictionary(std::string file)
 {
 	res = doc->load_file(file.c_str());
 	
-	LOG("Load result: " << res.description());
+	//LOG("Load result: " << res.description());
+	// Log a more sensible way
 }
